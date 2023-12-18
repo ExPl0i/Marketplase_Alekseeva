@@ -19,7 +19,7 @@ input {
   align-items: center;
   display: flex;
   flex-direction: column;
-  background-color: #ffffff;
+  background-color: #2F4F4F;
 }
 .main-j32 .header-v7W {
   box-sizing: border-box;
@@ -27,7 +27,7 @@ input {
   width: 100%;
   display: flex;
   align-items: center;
-  background-color: #2F4F4F;
+  background-color: rgb(27, 27, 27);
   flex-shrink: 0;
 }
 .main-j32 .header-v7W .item--azg {
@@ -111,15 +111,113 @@ footer{
 .button {
   width: 100%;
   height: 2.1rem;
-  background-color: #ffffff;
+  background-color: #111;
   text-align: center;
   font-size: 1.2rem;
   font-weight: 400;
   line-height: 1.2125;
-  color: #2F4F4F;
+  color: #fff;
   font-family: Inter, 'Source Sans Pro';
-  border-radius: 1rem;
+  z-index: 0;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+}
+.button:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.button:active {
+  color: #000
+}
+
+.button:active:after {
+  background: transparent;
+}
+
+.button:hover:before {
+  opacity: 1;
+}
+
+.button:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+.button-image {
+  border: none;
+  cursor: pointer;
+  appearance: none;
+  background-color: inherit;
+  transition: transform .0.25s ease-in-out;
+  margin-left:10px;
+}
+.button-image:hover,
+.button-image:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+form {
+  position: relative;
+  width: 600px;
+  margin: 0 auto;
+}
+input, .button-search   {
+  border: none;
+  outline: none;
+  border-radius: 3px;
+}
+input {
+  width: 100%;
+  height: 42px;
+  background: #fff;
+  padding-left: 15px;
+}
+.button-search {
+  height: 26px;
+  width: 26px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #111;
+  cursor: pointer;
+}
+.button-search {
+  content: "\f105";
+  font-family: arial;
+  color: #ffffff;
+  font-size: 20px;
 }
 table{
   border-spacing: 3.2rem 4rem;
+}
+body {
+  background-color: DarkSlateGrey;
 }
