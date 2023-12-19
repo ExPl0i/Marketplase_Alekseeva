@@ -41,3 +41,11 @@ function showNextSlide(direction) {
 	nextSlide.classList.remove('hidden');
 	nextSlide.setAttribute('data-active', '');
 }
+function openPopup() {
+	var popup = document.querySelector('.popup');
+	popup.style.display = 'block';
+  }
+function closePopup() {
+	var popup = document.querySelector('.popup');
+	popup.style.display = 'none';
+}
