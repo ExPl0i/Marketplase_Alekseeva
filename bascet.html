@@ -28,9 +28,9 @@
             </div>
         </header>
           <div class="controls">
-            <button class="button-buy" onclick="alert('ИДИ РАБОТАЙ!!!!')">Купить все!!!</button>
+            <button class="button-buy" onclick="if(confirm('Оплатить?')){alert('ИДИ РАБОТАЙ!!!!');document.getElementById('tb').style.display = 'block';}">Купить все!!!</button>
           </div>
-          <div class="slider" id="slider">
+          <div class="tb" id="tb">
             <img class="image-product" src="assets/blet.webp"/>
           </div>
         <script src="" async defer></script>

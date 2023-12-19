@@ -428,3 +428,12 @@ a {
   50% { background-position: 400% 0; }
   100% { background-position: 0 0; }
 }
+.tb {
+  margin-left: auto;
+  margin-right: auto;
+  width: 900px;
+  height: 600px;
+  background-color: azure;
+  border-radius: 1rem;
+  display: none;
+}
